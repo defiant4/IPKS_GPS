@@ -1,0 +1,62 @@
+<%-- 
+    Document   : welcome
+    Created on : Apr 14, 2015, 1:35:59 PM
+    Author     : 590685
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Welcome Page</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    </head>
+    <body onload="noBack()">
+        <script type="text/javascript">
+            function noBack()
+            {
+                window.history.forward();
+            }
+        </script>
+
+
+        <%
+                    String ModuleName = new String();
+
+                    ModuleName = (String) session.getAttribute("moduleName");
+
+
+        %>
+
+
+        <% if (ModuleName.equalsIgnoreCase("KCC")) {%>
+        <jsp:include page="MenuHead.jsp" flush="true" />
+        <%} else if (ModuleName.equalsIgnoreCase("pds")) {%>
+        <jsp:include page="MenuHead_PDS.jsp" flush="true" />
+         <%} else if (ModuleName.equalsIgnoreCase("trading")) {%>
+        <jsp:include page="/Trading_JSP/MenuHead_TRADING.jsp" flush="true" />
+       <%}else if (ModuleName.equalsIgnoreCase("asset")) {%>
+        <jsp:include page="/Asset_JSP/MenuHead_ASSET.jsp" flush="true" />
+        <%}else if (ModuleName.equalsIgnoreCase("govt")) {%>
+        <jsp:include page="/GPS_JSP/MenuHead_GPS.jsp" flush="true" />
+        <%}%>
+
+        <center>
+            <img src="/PacsApplication/img/IPKSLOGO.png"  width="674px" height="491px" alt="PACS"/>
+            <!--<b><font face="Poor Richard" color="0000FF" size="72">PACS</font></b>
+            <br><br>
+            <font face="Trebuchet MS" color="0000FF" size="12">Primary Agricultural Co-Operative Credit Soceity</font>-->
+        </center>
+        <!-- <center>
+             <div style=" alignment-adjust: central; bottom: 0; width: 100%">
+                 &copy; 2016 Tata Consultancy Services Ltd. All Rights Reserved.
+             </div>
+
+         </center>-->
+
+    </body>
+
+</html>

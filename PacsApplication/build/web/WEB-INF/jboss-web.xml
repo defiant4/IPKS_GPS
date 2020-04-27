@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+  <context-root>/PacsApplication</context-root>
+  <resource-ref>
+  <res-ref-name>jdbc/conDS</res-ref-name>
+  <jndi-name>java:jdbc/conDS</jndi-name>
+  <res-type>javax.sql.DataSource</res-type>
+  <res-auth>Container</res-auth>
+  <res-sharing-scope>Shareable</res-sharing-scope>
+     </resource-ref>
+</jboss-web>

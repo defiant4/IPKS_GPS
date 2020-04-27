@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 30, 2016, 7:31:43 PM
+    Author     : Tcs Helpdesk10
+*/
+
+.info{
+border: 1px solid;
+margin: 10px 0px;
+font-weight: normal;
+padding:5px 10px 5px 50px;
+width: 400px ;
+background-repeat: no-repeat;
+background-position: 10px center;
+color: #006600;
+background-color: #DFF2BF;
+background-image: url('/PacsApplication/img/info.png') ;
+
+}
